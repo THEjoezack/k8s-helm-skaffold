@@ -1,5 +1,12 @@
 # k8s inferno  / skynet / live sharing / one fine sunday / pair
 
+## Up next
+
+- Stateful set
+- Separate www to front-end/back-end
+- Prometheus/Grafana
+- 1 metric, 1 trace, and get that visualixed in prom jager and grafana.
+
 ## Running Manually
 
 ```bash
@@ -35,6 +42,12 @@ kubectl apply -f www
 
 Notes:
 - You should probably reset your cluster from the previous step
+
+## Running via skaffold
+
+```bash
+skaffold run --port-forward
+```
 
 ## Resources
 

@@ -1,6 +1,4 @@
 replicaCount: 3
 
-image:
-  repository: www
-  pullPolicy: Never
-  tag: latest
+image: www:latest
+pullPolicy: Never

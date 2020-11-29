@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta10
+kind: Config
+
+build:
+  artifacts:
+    - image: www
+      context: www
+
+deploy:
+  helm:
+    releases:
+      - name: www
+        chartPath: charts/www
+        artifactOverrides:
+          image: www
