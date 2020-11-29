@@ -21,7 +21,7 @@ docker run -p 5001:80 www:latest
 # Note: No "s" in the protocol - http://localhost:5001/
 ```
 
-# Running via Kubernetes
+## Running via Kubernetes
 
 ```bash
 cd www
@@ -31,7 +31,16 @@ cd ../deployment
 kubectl apply -f www
 # Note: No "s" in the protocol - http://localhost:5001/
 ```
+## Running via Helm
+
+Notes:
+- You should probably reset your cluster from the previous step
 
 ## Resources
+
+```bash
+cd charts
+helm install www www
+```
 
 * [.NET Dockerfile (thanks GaProgMan)](https://github.com/GaProgMan/OnionArch/blob/master/Dockerfile)
