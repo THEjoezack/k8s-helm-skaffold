@@ -16,13 +16,21 @@ Notes:
 
 ```bash
 cd www
-docker build . -t www
-docker run -p 5001:80 www
+docker build . -t www:latest
+docker run -p 5001:80 www:latest
 # Note: No "s" in the protocol
 open http://localhost:5001/
 ```
 
 # Running via Kubernetes
+
+```bash
+cd www
+docker build . -t www:latest
+docker run -p 5001:80 www:latest
+# Note: No "s" in the protocol
+open http://localhost:5001/
+```
 
 ## Resources
 

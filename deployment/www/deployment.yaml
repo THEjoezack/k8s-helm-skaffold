@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - image: www:latest
-          imagePullPolicy: Always
+          imagePullPolicy: Never
           name: www
           resources:
             requests:
