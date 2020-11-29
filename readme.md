@@ -18,8 +18,7 @@ Notes:
 cd www
 docker build . -t www:latest
 docker run -p 5001:80 www:latest
-# Note: No "s" in the protocol
-open http://localhost:5001/
+# Note: No "s" in the protocol - http://localhost:5001/
 ```
 
 # Running via Kubernetes
@@ -27,9 +26,10 @@ open http://localhost:5001/
 ```bash
 cd www
 docker build . -t www:latest
-docker run -p 5001:80 www:latest
-# Note: No "s" in the protocol
-open http://localhost:5001/
+
+cd ../deployment
+kubectl apply -f www
+# Note: No "s" in the protocol - http://localhost:5001/
 ```
 
 ## Resources
