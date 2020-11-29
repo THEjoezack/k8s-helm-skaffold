@@ -7,3 +7,8 @@
 cd www
 dotnet run
 ```
+
+
+## Resources
+
+* [.NET Dockerfile (thanks GaProgMan)](https://github.com/GaProgMan/OnionArch/blob/master/Dockerfile)
