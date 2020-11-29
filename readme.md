@@ -11,6 +11,9 @@ open https://localhost:5001/
 ```
 ## Running via Docker
 
+Notes:
+- we skimped on some security best practices here, like running as root, be warned!)
+
 ```bash
 cd www
 docker build . -t www
@@ -18,6 +21,8 @@ docker run -p 5001:80 www
 # Note: No "s" in the protocol
 open http://localhost:5001/
 ```
+
+# Running via Kubernetes
 
 ## Resources
 
