@@ -6,7 +6,7 @@ Notes:
 - We skimped on some security best practices here, like running the container as root, be warned!)
 - These steps are assumed to be independent, so you should reset your Kubernetes cluster between the Kubernetes steps.
 
-## 1. Running Manually
+## Running Manually
 
 This is your typical pre-Docker development story. It requires dotnet 5 installed on your computer.
 
