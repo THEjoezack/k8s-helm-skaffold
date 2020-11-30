@@ -1,6 +1,6 @@
 # k8s inferno  / skynet / live sharing / one fine sunday / pair
 
-This is a project built on live streaming meant to walk through running an n-tier application from local dev, to kubernetes files, to helm, to skaffold. It's a work in progress!
+This is a project built on [live streaming](https://twitch.tv/jz_codingblocks) meant to walk through running an n-tier application from local dev, to kubernetes files, to helm, to skaffold. It's a work in progress!
 
 Notes:
 - We skimped on some security best practices here, like running the container as root, be warned!)
