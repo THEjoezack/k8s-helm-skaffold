@@ -79,7 +79,7 @@ skaffold dev --port-forward
 - Stateful set
 - Separate www to front-end/back-end
 - Prometheus/Grafana
-- 1 metric, 1 trace, and get that visualixed in prom jager and grafana.
+- 1 metric, 1 trace, and get that visualized in prom jager and grafana.
 
 ## Resources
 
