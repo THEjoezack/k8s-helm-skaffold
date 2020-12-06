@@ -1,0 +1,10 @@
+namePrefix: production-
+commonLabels:
+  variant: production
+  org: acmeCorporation
+commonAnnotations:
+  note: Momma, I wanna go fast.
+bases:
+- ../../deploy
+patchesStrategicMerge:
+- deployment.yaml

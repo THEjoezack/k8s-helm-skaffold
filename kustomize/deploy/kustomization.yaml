@@ -1,0 +1,6 @@
+commonLabels:
+  app: pair-app
+
+resources:
+- deployment.yaml
+- service.yaml

@@ -13,3 +13,21 @@ deploy:
         chartPath: charts/www
         artifactOverrides:
           image: www
+
+profiles:
+  - name: kustom-dev
+    patches:
+      - op: replace
+        path: /deploy
+        value: 
+          kustomize:
+            paths:
+            - kustomize/overlays/dev
+  - name: kustom-prod
+    patches:
+      - op: replace
+        path: /deploy
+        value: 
+          kustomize:
+            paths:
+            - kustomize/overlays/prod
