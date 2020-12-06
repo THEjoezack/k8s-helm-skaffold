@@ -1,6 +1,14 @@
-# k8s inferno  / skynet / live sharing / one fine sunday / pair
+# Kubernetes Workflows
 
-This is a project built on [live streaming](https://twitch.tv/jz_codingblocks) meant to walk through running an n-tier application from local dev, to kubernetes files, to helm, to skaffold. It's a work in progress!
+(aka as k8s inferno  / skynet / live sharing / one fine sunday / pair)
+
+On [Twitch](https://dashboard.twitch.tv/jz_codingblocks) Outlaw and Joe started with a .NET 5 MVP application then...
+
+- [Converted it to Docker](https://github.com/THEjoezack/k8s-helm-skaffold/blob/main/www/Dockerfile)
+- [Converted it to a Kubernetes Deployment/Service](https://github.com/THEjoezack/k8s-helm-skaffold/tree/main/deployment/www)
+- [Set up a project for it in Skaffold](https://github.com/THEjoezack/k8s-helm-skaffold/blob/main/skaffold.yaml)
+- [Created Kustomize Overlays for it](https://github.com/THEjoezack/k8s-helm-skaffold/tree/main/kustomize)
+- [Created Skaffold profiles for Kustomize](https://github.com/THEjoezack/k8s-helm-skaffold/blob/main/skaffold.yaml)
 
 Notes:
 - We skimped on some security best practices here, like running the container as root, be warned!)
@@ -62,7 +70,7 @@ kubectl port-forward -5001:5001
 Notes:
 - You should probably reset your cluster from the previous step
 
-## Running via skaffold
+## Running via Skaffold
 
 We have arrived! Now anybody with Skaffold, Kubernetes and Docker installed can start up, keep updated, and stop this entire project with a single command.
 
@@ -74,14 +82,25 @@ Sweet, right?
 skaffold dev --port-forward
 ```
 
-## Up next
+## Running via Kustomize
 
-- Stateful set
-- Separate www to front-end/back-end
-- Prometheus/Grafana
-- 1 metric, 1 trace, and get that visualized in prom jager and grafana.
+Woah, just found out about Kustomize...how does that Jive with Helm/Skaffold?
+
+You can render your final Kubernetes like this...
+
+```bash
+kustomize build kustomize/production | kubectl apply -f -
+```
+
+## Running via Kustomize, via Skaffold Profile
+
+```bash
+skaffold dev --port-forward --profile kustomize-prod
+```
 
 ## Resources
 
 
-* [.NET Dockerfile (thanks GaProgMan)](https://github.com/GaProgMan/OnionArch/blob/master/Dockerfile)
+- [.NET Dockerfile (thanks GaProgMan!)](https://github.com/GaProgMan/OnionArch/blob/master/Dockerfile)
+- [Skaffold](https://skaffold.dev/)
+- [Kustomize (thanks TinFoilSaint!)](https://kustomize.io/)
